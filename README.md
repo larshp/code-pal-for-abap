@@ -1,6 +1,5 @@
 # code pal for ABAP
 
-
 [![abap package version](https://img.shields.io/endpoint?url=https://shield.abap.space/version-shield-json/github/SAP/code-pal-for-abap/src/y_code_pal_version.intf.abap/abap&label=version)](https://github.com/SAP/code-pal-for-abap/blob/master/changelog.txt)
 [![license](https://img.shields.io/github/license/SAP/code-pal-for-abap)](LICENSE)
 
