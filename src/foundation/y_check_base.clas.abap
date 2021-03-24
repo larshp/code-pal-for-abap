@@ -150,7 +150,7 @@ CLASS y_check_base DEFINITION PUBLIC ABSTRACT
                                        RETURNING VALUE(result) TYPE abap_bool.
 
     METHODS is_app_comp_in_scope IMPORTING level TYPE stmnt_levl
-                                 RETURNING VALUE(result) TYPE abap_bool.
+                                 RETURNING value(result) TYPE abap_bool.
 
 ENDCLASS.
 
@@ -597,7 +597,7 @@ CLASS y_check_base IMPLEMENTATION.
     ENDIF.
 
     IF clean_code_exemption_handler IS NOT BOUND.
-      clean_code_exemption_handler = NEW y_exemption_handler( ).
+      clean_code_exemption_handler = new y_exemption_handler( ).
     ENDIF.
 
     IF test_code_detector IS NOT BOUND.
