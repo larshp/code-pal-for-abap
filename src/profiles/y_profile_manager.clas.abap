@@ -2,7 +2,7 @@ CLASS y_profile_manager DEFINITION PUBLIC CREATE PUBLIC .
   PUBLIC SECTION.
     INTERFACES y_if_profile_manager.
     ALIASES create FOR y_if_profile_manager~create.
-    ALIASES get_checks_from_db for y_if_profile_manager~get_checks_from_db.
+    ALIASES get_checks_from_db FOR y_if_profile_manager~get_checks_from_db.
   PROTECTED SECTION.
     METHODS has_time_collision
       IMPORTING timeline_one_start TYPE dats
@@ -22,8 +22,8 @@ CLASS y_profile_manager DEFINITION PUBLIC CREATE PUBLIC .
                delegates_type TYPE tabname VALUE 'YTAB_DELEGATES',
                profiles_type  TYPE tabname VALUE 'YTAB_PROFILES'.
     CONSTANTS standardprofile TYPE ytab_profiles-profile VALUE 'SYSTEM-WIDE STANDARD'.
-    CLASS-METHODS get_check_base_package RETURNING value(result) TYPE devclass.
-    CLASS-METHODS get_checks_package RETURNING value(result) TYPE devclass.
+    CLASS-METHODS get_check_base_package RETURNING VALUE(result) TYPE devclass.
+    CLASS-METHODS get_checks_package RETURNING VALUE(result) TYPE devclass.
 ENDCLASS.
 
 
@@ -222,7 +222,7 @@ CLASS y_profile_manager IMPLEMENTATION.
     y_if_profile_manager~cleanup_profile( profile-profile ).
 
     LOOP AT delegates ASSIGNING FIELD-SYMBOL(<delegate>).
-       y_if_profile_manager~insert_delegate( <delegate> ).
+      y_if_profile_manager~insert_delegate( <delegate> ).
     ENDLOOP.
 
     LOOP AT checks ASSIGNING FIELD-SYMBOL(<check>).
@@ -393,12 +393,12 @@ CLASS y_profile_manager IMPLEMENTATION.
 
 
   METHOD y_if_profile_manager~profile_exists.
-    try.
+    TRY.
         "Based on Delegates because the profile might be inactive
         result = xsdbool( y_if_profile_manager~select_delegates( name ) IS NOT INITIAL ).
-      catch ycx_entry_not_found.
+      CATCH ycx_entry_not_found.
         result = abap_false.
-    endtry.
+    ENDTRY.
   ENDMETHOD.
 
 

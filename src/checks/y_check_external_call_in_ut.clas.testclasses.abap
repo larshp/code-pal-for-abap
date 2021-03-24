@@ -9,7 +9,7 @@ ENDCLASS.
 CLASS ltc_submit IMPLEMENTATION.
 
   METHOD get_cut.
-    result ?= NEW Y_CHECK_EXTERNAL_CALL_IN_UT( ).
+    result ?= NEW y_check_external_call_in_ut( ).
   ENDMETHOD.
 
   METHOD get_code_with_issue.
@@ -77,7 +77,7 @@ ENDCLASS.
 CLASS ltc_rfc_call_dest IMPLEMENTATION.
 
   METHOD get_cut.
-    result ?= NEW Y_CHECK_EXTERNAL_CALL_IN_UT( ).
+    result ?= NEW y_check_external_call_in_ut( ).
   ENDMETHOD.
 
   METHOD get_code_with_issue.
@@ -161,7 +161,7 @@ ENDCLASS.
 CLASS ltc_rfc_call_task IMPLEMENTATION.
 
   METHOD get_cut.
-    result ?= NEW Y_CHECK_EXTERNAL_CALL_IN_UT( ).
+    result ?= NEW y_check_external_call_in_ut( ).
   ENDMETHOD.
 
   METHOD get_code_with_issue.
@@ -246,7 +246,7 @@ ENDCLASS.
 CLASS ltc_rfc_call_newtask IMPLEMENTATION.
 
   METHOD get_cut.
-    result ?= NEW Y_CHECK_EXTERNAL_CALL_IN_UT( ).
+    result ?= NEW y_check_external_call_in_ut( ).
   ENDMETHOD.
 
   METHOD get_code_with_issue.
@@ -326,7 +326,7 @@ ENDCLASS.
 CLASS ltc_cl_gui_usage IMPLEMENTATION.
 
   METHOD get_cut.
-    result ?= NEW Y_CHECK_EXTERNAL_CALL_IN_UT( ).
+    result ?= NEW y_check_external_call_in_ut( ).
   ENDMETHOD.
 
   METHOD get_code_with_issue.

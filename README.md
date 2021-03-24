@@ -1,7 +1,9 @@
 # code pal for ABAP
 
+
 [![abap package version](https://img.shields.io/endpoint?url=https://shield.abap.space/version-shield-json/github/SAP/code-pal-for-abap/src/y_code_pal_version.intf.abap/abap&label=version)](https://github.com/SAP/code-pal-for-abap/blob/master/changelog.txt)
 [![license](https://img.shields.io/github/license/SAP/code-pal-for-abap)](LICENSE)
+
 
 This tool supports you in writing a clean ABAP code. Clean Code allows you to read your code like well-written prose, it is easily understandable, maintainable, and extensible. In addition, you can write high quality and reliable Unit Tests without hurdles and thereby reduce the total cost of ownership of the software.
 
@@ -38,7 +40,7 @@ The Profile Management Tool, which is an alternative of working with SCI based v
 - Multiple execution of several profiles at the same time (the sharpest/strongest and time valid configuration/threshold will be taken);
 - Delegation principle to facilitate team work (all delegates, for instance: team members, can work with the same profile);
 
-:warning: The checks are not RFC-Enabled due to local dependencies. 
+:warning: The checks are not RFC-Enabled due to local dependencies.
 
 ## List of Checks
 
