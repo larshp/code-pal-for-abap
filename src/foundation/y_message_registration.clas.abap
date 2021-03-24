@@ -10,13 +10,13 @@ CLASS y_message_registration DEFINITION
         !pseudo_comment TYPE sci_pcom OPTIONAL
       CHANGING
         !messages       TYPE scimessages .
-protected section.
-private section.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS Y_MESSAGE_REGISTRATION IMPLEMENTATION.
+CLASS y_message_registration IMPLEMENTATION.
 
 
   METHOD add_message.
