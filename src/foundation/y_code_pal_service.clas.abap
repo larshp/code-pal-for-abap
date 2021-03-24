@@ -4,7 +4,7 @@ CLASS y_code_pal_service DEFINITION PUBLIC CREATE PUBLIC.
     TYPES: BEGIN OF versions,
              code_pal_for_abap TYPE string,
              sap_basis         TYPE string,
-             abapGit           TYPE string,
+             abapgit           TYPE string,
            END OF versions.
 
   PROTECTED SECTION.
@@ -30,7 +30,7 @@ CLASS y_code_pal_service DEFINITION PUBLIC CREATE PUBLIC.
                                      RETURNING VALUE(result) TYPE y_if_profile_manager=>check_descriptions.
 
     METHODS write_non_executed_checks IMPORTING non_executed_checks TYPE y_if_profile_manager=>check_descriptions
-                                      RETURNING value(result)       TYPE string.
+                                      RETURNING VALUE(result)       TYPE string.
 
   PRIVATE SECTION.
     DATA request TYPE REF TO if_http_request.
@@ -105,7 +105,7 @@ CLASS y_code_pal_service IMPLEMENTATION.
 
     DATA(structure) = VALUE versions( code_pal_for_abap = y_code_pal_version=>abap
                                       sap_basis = get_basis_version( )
-                                      abapGit = zif_abapgit_version=>gc_abap_version ).
+                                      abapgit = zif_abapgit_version=>gc_abap_version ).
 
     DATA(json) = /ui2/cl_json=>serialize( structure ).
 
