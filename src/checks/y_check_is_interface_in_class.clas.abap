@@ -10,16 +10,16 @@ CLASS y_check_is_interface_in_class DEFINITION PUBLIC INHERITING FROM y_check_ba
     DATA public_method_counter TYPE i VALUE 0.
 
     METHODS get_first_token IMPORTING statement TYPE sstmnt
-                            RETURNING value(result) TYPE string.
+                            RETURNING VALUE(result) TYPE string.
 
     METHODS get_second_token IMPORTING statement TYPE sstmnt
-                            RETURNING value(result) TYPE string.
+                            RETURNING VALUE(result) TYPE string.
 
     METHODS get_third_token IMPORTING statement TYPE sstmnt
-                            RETURNING value(result) TYPE string.
+                            RETURNING VALUE(result) TYPE string.
 
     METHODS get_last_token IMPORTING statement TYPE sstmnt
-                           RETURNING value(result) TYPE string.
+                           RETURNING VALUE(result) TYPE string.
 
     METHODS check_result IMPORTING structure TYPE sstruc.
 
@@ -27,7 +27,7 @@ ENDCLASS.
 
 
 
-CLASS Y_CHECK_IS_INTERFACE_IN_CLASS IMPLEMENTATION.
+CLASS y_check_is_interface_in_class IMPLEMENTATION.
 
 
   METHOD constructor.
